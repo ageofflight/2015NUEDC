@@ -1,0 +1,265 @@
+/**
+  ******************************************************************************
+  * File Name          : gpio.c
+  * Date               : 15/08/2015 22:02:23
+  * Description        : This file provides code for the configuration
+  *                      of all used GPIO pins.
+  ******************************************************************************
+  *
+  * COPYRIGHT(c) 2015 STMicroelectronics
+  *
+  * Redistribution and use in source and binary forms, with or without modification,
+  * are permitted provided that the following conditions are met:
+  *   1. Redistributions of source code must retain the above copyright notice,
+  *      this list of conditions and the following disclaimer.
+  *   2. Redistributions in binary form must reproduce the above copyright notice,
+  *      this list of conditions and the following disclaimer in the documentation
+  *      and/or other materials provided with the distribution.
+  *   3. Neither the name of STMicroelectronics nor the names of its contributors
+  *      may be used to endorse or promote products derived from this software
+  *      without specific prior written permission.
+  *
+  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+  * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  *
+  ******************************************************************************
+  */
+
+/* Includes ------------------------------------------------------------------*/
+#include "gpio.h"
+/* USER CODE BEGIN 0 */
+
+#include "motor.h"
+#include "myiic.h"
+#include "PID_Control.h"
+
+
+WorkStatus workstatus=InitState;
+FunctionalState state=DISABLE;
+FlagStatus press=RESET;
+
+extern TIM_HandleTypeDef htim6;
+
+extern TIM_HandleTypeDef htim9;
+
+extern float Init_Pitch;
+extern float Pitch;
+
+extern PID_Struct PID_Pitch_Struct;				 //定义Pitch的PID结构体,绕Y轴
+extern PID_Struct PID_Roll_Struct;			 //定义Roll的PID结构体,绕X轴
+
+extern float Motor_Angle_X;					   //横滚期望
+extern float Motor_Angle_Y;					   //俯仰期望
+
+extern uint8_t Mode;
+
+extern float Amplitude;   //可控摆幅模式下摆幅参数,默认值为15
+
+extern float Radius;      //可控圆摆默认半径
+
+extern float Radius_Eight;   //八字摆幅度
+
+extern float nDirection;   //任意方向摆角度
+
+extern float nAmplitude;   //任意方向摆幅度
+
+
+/* USER CODE END 0 */
+
+/*----------------------------------------------------------------------------*/
+/* Configure GPIO                                                             */
+/*----------------------------------------------------------------------------*/
+/* USER CODE BEGIN 1 */
+
+/* USER CODE END 1 */
+
+/** Configure pins as 
+        * Analog 
+        * Input 
+        * Output
+        * EVENT_OUT
+        * EXTI
+*/
+void MX_GPIO_Init(void)
+{
+
+  GPIO_InitTypeDef GPIO_InitStruct;
+
+  /* GPIO Ports Clock Enable */
+  __GPIOE_CLK_ENABLE();
+  __GPIOH_CLK_ENABLE();
+  __GPIOC_CLK_ENABLE();
+  __GPIOA_CLK_ENABLE();
+  __GPIOB_CLK_ENABLE();
+  __GPIOD_CLK_ENABLE();
+
+  /*Configure GPIO pins : PC1 PC2 */
+  GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_2;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA0 */
+  GPIO_InitStruct.Pin = GPIO_PIN_0;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PA4 PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PD12 PD13 PD14 PD15 
+                           PD3 PD4 */
+  GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15 
+                          |GPIO_PIN_3|GPIO_PIN_4;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_LOW;
+  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC9 */
+  GPIO_InitStruct.Pin = GPIO_PIN_9;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PB4 PB5 */
+  GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /* EXTI interrupt init*/
+  HAL_NVIC_SetPriority(EXTI1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI1_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+
+  HAL_NVIC_SetPriority(EXTI9_5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+
+}
+
+/* USER CODE BEGIN 2 */
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin == GPIO_PIN_0)
+	{
+	if(workstatus==OnState)
+	{
+		if(state != DISABLE)
+		{
+			state = DISABLE;
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
+			__HAL_TIM_DISABLE_IT(&htim6, TIM_IT_UPDATE);
+//			HAL_TIM_PWM_Stop(&htim9, TIM_CHANNEL_1);
+		}
+		else
+		{
+			state = ENABLE;
+			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET);
+			__HAL_TIM_ENABLE_IT(&htim6, TIM_IT_UPDATE);
+			
+//			HAL_TIM_PWM_Start(&htim9, TIM_CHANNEL_1);
+//			delay_ms(1);
+//			htim9.Instance->CCR1 = 1200;
+//			delay_ms(1);
+//			HAL_TIM_PWM_Stop(&htim9, TIM_CHANNEL_1);
+			
+			Init_Pitch=Pitch;    //Init_Pitch用于等周期控制时的摆起角度参考
+//			PID_Pitch_Struct.expectation=Init_Pitch;
+		}
+	}
+	else
+	{
+		TIM1_Motor_PWMOutput( 1000, 1000, 1000, 1000);
+		press=SET;
+	}
+  }
+//	delay_ms(10);   //按键消抖，不知有无效果
+//	printf("\n KEY_PRESS \n\r");
+	static uint8_t S1_count=0;
+	
+	
+  if(GPIO_Pin == GPIO_PIN_2)
+	{
+	  S1_count++;
+		if(S1_count>=6)
+		{
+			S1_count=0;
+		}
+		Mode=S1_count;
+	}
+	
+	if(GPIO_Pin == GPIO_PIN_5)
+	{
+	  if(Mode == 2)
+		{
+			Amplitude+=1;
+		}
+		if(Mode == 3)
+		{
+			nDirection+=1;
+		}
+		if(Mode == 4)
+		{
+			Radius+=1;
+		}
+		if(Mode == 5)
+		{
+			Radius_Eight+=1;
+		}
+	}
+	
+	if(GPIO_Pin == GPIO_PIN_1)
+	{
+	  if(Mode == 2)
+		{
+			Amplitude-=1;
+		}
+		if(Mode == 3)
+		{
+			nDirection-=1;
+		}
+		if(Mode == 4)
+		{
+			Radius-=1;
+		}
+		if(Mode == 5)
+		{
+			Radius_Eight-=1;
+		}
+	}
+	
+	
+}
+
+/* USER CODE END 2 */
+
+/**
+  * @}
+  */
+
+/**
+  * @}
+  */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

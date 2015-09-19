@@ -1,0 +1,36 @@
+pid_control.o: ..\Src\PID_Control.c
+pid_control.o: D:\c language\keil4\ARM\ARMCC\bin\..\include\math.h
+pid_control.o: ..\Inc\motor.h
+pid_control.o: ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+pid_control.o: ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
+pid_control.o: ..\Drivers\CMSIS\Include\core_cm4.h
+pid_control.o: D:\c language\keil4\ARM\ARMCC\bin\..\include\stdint.h
+pid_control.o: ..\Drivers\CMSIS\Include\core_cmInstr.h
+pid_control.o: ..\Drivers\CMSIS\Include\core_cmFunc.h
+pid_control.o: ..\Drivers\CMSIS\Include\core_cmSimd.h
+pid_control.o: ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h
+pid_control.o: ..\Inc\stm32f4xx_hal_conf.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h
+pid_control.o: ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy/stm32_hal_legacy.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h
+pid_control.o: ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h
+pid_control.o: ..\Inc\PID_Control.h
+pid_control.o: ..\Src\CoordinatesTrans\coordinatetrans.h

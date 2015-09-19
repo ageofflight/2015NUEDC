@@ -1,0 +1,282 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+H:\stm32\STM32F407\SinglePendulumDMP\MDK-ARM\SinglePendulumDMP.uvproj
+Project File Date:  08/15/2015
+
+<h2>Output:</h2>
+Build target 'SinglePendulumDMP Configuration'
+compiling tim.c...
+..\Src\tim.c(1079): warning:  #188-D: enumerated type mixed with another type
+compiling main.c...
+..\Src\main.c(193): warning:  #223-D: function "printf" declared implicitly
+compiling dma.c...
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(205): warning:  #177-D: variable "tmp1" was declared but never referenced
+..\Src\stm32f4xx_it.c(205): warning:  #177-D: variable "tmp2" was declared but never referenced
+..\Src\stm32f4xx_it.c(205): warning:  #177-D: variable "i" was declared but never referenced
+compiling gpio.c...
+compiling stm32f4xx_hal_msp.c...
+compiling usart.c...
+compiling spi.c...
+compiling i2c.c...
+linking...
+Program Size: Code=37038 RO-data=4242 RW-data=336 ZI-data=4328  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 5 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(193): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=37034 RO-data=4238 RW-data=336 ZI-data=4328  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(193): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38158 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Build target 'SinglePendulumDMP Configuration'
+compiling gpio.c...
+linking...
+Program Size: Code=38158 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 0 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38158 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 4 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Failed!
+ST-LINK USB communication error
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(193): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38154 RO-data=4238 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38158 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 4 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38158 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 4 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(193): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38158 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(193): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38150 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38146 RO-data=4238 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 4 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+linking...
+Program Size: Code=38146 RO-data=4238 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 0 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38110 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 4 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(193): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=37314 RO-data=4190 RW-data=324 ZI-data=4444  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(193): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38126 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(193): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38110 RO-data=4242 RW-data=336 ZI-data=4448  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling tim.c...
+linking...
+Program Size: Code=38006 RO-data=4242 RW-data=332 ZI-data=4444  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 0 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(195): warning:  #223-D: function "printf" declared implicitly
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(471): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38070 RO-data=4242 RW-data=332 ZI-data=4444  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 6 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(195): warning:  #223-D: function "printf" declared implicitly
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(471): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38090 RO-data=4238 RW-data=332 ZI-data=4444  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 6 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38042 RO-data=4238 RW-data=332 ZI-data=4444  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 4 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38046 RO-data=4242 RW-data=332 ZI-data=4444  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 4 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(145): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(171): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(227): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(264): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=38042 RO-data=4238 RW-data=332 ZI-data=4444  
+"SinglePendulumDMP Configuration\SinglePendulumDMP Configuration.axf" - 0 Errors, 4 Warning(s).
+Load "SinglePendulumDMP Configuration\\SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.

@@ -1,0 +1,278 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+H:\stm32\STM32F407\SinglePendulumDMP\MDK-ARM\SinglePendulumDMP.uvproj
+Project File Date:  08/13/2015
+
+<h2>Output:</h2>
+Build target 'SinglePendulumDMP Configuration'
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_flash.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_uart.c...
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_tim.c...
+compiling stm32f4xx_hal_i2c.c...
+compiling stm32f4xx_hal_i2c_ex.c...
+compiling stm32f4xx_hal_spi.c...
+compiling tim.c...
+..\Src\tim.c(932): warning:  #188-D: enumerated type mixed with another type
+compiling main.c...
+..\Src\main.c(192): warning:  #223-D: function "printf" declared implicitly
+compiling dma.c...
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(167): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(309): error:  #20: identifier "MOTOR1" is undefined
+..\Src\stm32f4xx_it.c(311): error:  #20: identifier "MOTOR1" is undefined
+..\Src\stm32f4xx_it.c(313): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(313): error:  #20: identifier "MOTOR1" is undefined
+..\Src\stm32f4xx_it.c(328): error:  #20: identifier "MOTOR2" is undefined
+..\Src\stm32f4xx_it.c(330): error:  #20: identifier "MOTOR2" is undefined
+..\Src\stm32f4xx_it.c(332): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(332): error:  #20: identifier "MOTOR2" is undefined
+..\Src\stm32f4xx_it.c(295): warning:  #177-D: variable "temp_cnt3" was declared but never referenced
+..\Src\stm32f4xx_it.c(295): warning:  #177-D: variable "temp_cnt3_2" was declared but never referenced
+..\Src\stm32f4xx_it.c(295): warning:  #177-D: variable "temp_cnt4" was declared but never referenced
+..\Src\stm32f4xx_it.c(295): warning:  #177-D: variable "temp_cnt4_2" was declared but never referenced
+compiling gpio.c...
+compiling stm32f4xx_hal_msp.c...
+compiling usart.c...
+compiling mpu6050.c...
+..\Src\MPU6050\mpu6050.c(45): warning:  #223-D: function "printf" declared implicitly
+..\Src\MPU6050\mpu6050.c(52): warning:  #223-D: function "printf" declared implicitly
+..\Src\MPU6050\mpu6050.c(122): warning:  #550-D: variable "Gz" was set but never used
+compiling inv_mpu.c...
+compiling inv_mpu_dmp_motion_driver.c...
+compiling myiic.c...
+compiling Data_Receive.c...
+compiling Data_Transfer.c...
+compiling PID_Control.c...
+compiling sqQueue.c...
+..\Src\sqQueue.c(43): warning:  #223-D: function "printf" declared implicitly
+compiling motor.c...
+compiling uranus.c...
+compiling filter.c...
+..\Src\Filter\filter.c(14): warning: C4017W: j may be used before being set
+compiling pendulumcontrol.c...
+..\Src\Pendulum\pendulumcontrol.c(115): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(141): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(197): warning:  #223-D: function "printf" declared implicitly
+..\Src\Pendulum\pendulumcontrol.c(234): warning:  #223-D: function "printf" declared implicitly
+compiling spi.c...
+compiling i2c.c...
+compiling nine_axis_module.c...
+"SinglePendulumDMP Configuration.axf" - 6 Errors, 18 Warning(s).
+Target not created
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(331): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(361): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(303): warning:  #177-D: variable "Rc_Channel3" was declared but never referenced
+..\Src\stm32f4xx_it.c(303): warning:  #177-D: variable "Rc_Channel4" was declared but never referenced
+linking...
+Program Size: Code=32542 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 5 Warning(s).
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(332): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(362): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(304): warning:  #177-D: variable "Rc_Channel3" was declared but never referenced
+..\Src\stm32f4xx_it.c(304): warning:  #177-D: variable "Rc_Channel4" was declared but never referenced
+linking...
+Program Size: Code=32542 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 5 Warning(s).
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(332): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(362): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=32542 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 3 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling tim.c...
+..\Src\tim.c(932): warning:  #188-D: enumerated type mixed with another type
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(332): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(362): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=32542 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 4 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(332): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(362): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=32558 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 3 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(332): warning:  #223-D: function "printf" declared implicitly
+..\Src\stm32f4xx_it.c(362): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=32558 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 3 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(332): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=32526 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 2 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(332): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=32526 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 2 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(332): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=32534 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 2 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(362): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=32526 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 2 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(362): warning:  #223-D: function "printf" declared implicitly
+linking...
+Program Size: Code=32534 RO-data=3906 RW-data=376 ZI-data=2800  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 2 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(192): warning:  #223-D: function "printf" declared implicitly
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=34098 RO-data=4406 RW-data=388 ZI-data=2796  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 2 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling inv_mpu.c...
+linking...
+Program Size: Code=34126 RO-data=4410 RW-data=388 ZI-data=2796  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 0 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling inv_mpu.c...
+linking...
+Program Size: Code=34126 RO-data=4410 RW-data=388 ZI-data=2796  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 0 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(192): warning:  #223-D: function "printf" declared implicitly
+compiling inv_mpu.c...
+linking...
+Program Size: Code=33374 RO-data=4410 RW-data=388 ZI-data=2796  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling main.c...
+..\Src\main.c(192): warning:  #223-D: function "printf" declared implicitly
+compiling inv_mpu.c...
+linking...
+Program Size: Code=34126 RO-data=4410 RW-data=388 ZI-data=2796  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 1 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+..\Src\stm32f4xx_it.c(303): warning:  #550-D: variable "Rc_Channel1" was set but never used
+..\Src\stm32f4xx_it.c(303): warning:  #550-D: variable "Rc_Channel2" was set but never used
+linking...
+Program Size: Code=33974 RO-data=4410 RW-data=388 ZI-data=2796  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 3 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'SinglePendulumDMP Configuration'
+compiling tim.c...
+..\Src\tim.c(932): warning:  #188-D: enumerated type mixed with another type
+compiling stm32f4xx_it.c...
+..\Src\stm32f4xx_it.c(174): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=34030 RO-data=4410 RW-data=388 ZI-data=2796  
+"SinglePendulumDMP Configuration.axf" - 0 Errors, 2 Warning(s).
+Load "SinglePendulumDMP Configuration.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
