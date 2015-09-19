@@ -1,0 +1,1 @@
+File 'MUP6050' ,'IIC' AND 'DELAY' WERE COPY FROME ALENTEK 'E:\BaiduYunDownload\探索者STM32F4光盘资料\4，程序源码\2，标准例程-库函数版本\实验32 MPU6050六轴传感器实验\HARDWARE'
